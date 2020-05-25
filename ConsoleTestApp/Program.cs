@@ -15,7 +15,6 @@ namespace ConsoleTestApp
 
 
             var someHandler = services.GetService<ChangeNameHandler>();
-            var i = 0;
         }
 
         private static ServiceProvider BuildServices()
