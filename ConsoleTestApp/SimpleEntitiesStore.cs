@@ -4,11 +4,11 @@ using СonveyoR;
 
 namespace ConsoleTestApp
 {
-    public class ChangeEntityContext
+    public class SimpleEntitiesStore
     {
         private readonly IConveyor _conveyor;
 
-        public ChangeEntityContext(IConveyor conveyor)
+        public SimpleEntitiesStore(IConveyor conveyor)
         {
             _conveyor = conveyor;
         }

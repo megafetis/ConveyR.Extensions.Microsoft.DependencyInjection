@@ -6,9 +6,9 @@ using СonveyoR;
 
 namespace NUnitTest.Handlers
 {
-    class GenerateIdHandler:ProcessStepHandler<ChangeEntityContext, IEntity>
+    class GenerateIdHandler:ProcessStepHandler<SimpleEntitiesStore, IEntity>
     {
-        protected override Task Process(ChangeEntityContext context, IEntity entity)
+        protected override Task Process(SimpleEntitiesStore context, IEntity entity)
         {
             if (string.IsNullOrEmpty(entity.Id))
             {

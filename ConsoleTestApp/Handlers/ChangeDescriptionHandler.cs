@@ -5,9 +5,9 @@ using СonveyoR;
 
 namespace ConsoleTestApp.Handlers
 {
-    class ChangeDescriptionHandler:ProcessStepHandler<ChangeEntityContext, IHasDescription,IHasDescriptionPayload>
+    class ChangeDescriptionHandler:ProcessStepHandler<SimpleEntitiesStore, IHasDescription,IHasDescriptionPayload>
     {
-        protected override Task Process(ChangeEntityContext context, IHasDescription entity, IHasDescriptionPayload payload)
+        protected override Task Process(SimpleEntitiesStore context, IHasDescription entity, IHasDescriptionPayload payload)
         {
             entity.Description = payload.Description;
             return Task.CompletedTask;

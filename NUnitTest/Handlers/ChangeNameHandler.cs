@@ -8,9 +8,9 @@ using СonveyoR;
 
 namespace NUnitTest.Handlers
 {
-    public class ChangeNameHandler:ProcessStepHandler<ChangeEntityContext, IHasName,IHasNamePayload>
+    public class ChangeNameHandler:ProcessStepHandler<SimpleEntitiesStore, IHasName,IHasNamePayload>
     {
-        protected override Task Process(ChangeEntityContext context, IHasName entity, IHasNamePayload payload)
+        protected override Task Process(SimpleEntitiesStore context, IHasName entity, IHasNamePayload payload)
         {
             if(payload.Name==null)
                 throw new ArgumentNullException("Name","Entity name must be named");
