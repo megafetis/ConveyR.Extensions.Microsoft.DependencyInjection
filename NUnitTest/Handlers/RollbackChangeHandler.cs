@@ -7,8 +7,8 @@ using СonveyoR;
 
 namespace NUnitTest.Handlers
 {
-    [ProcessOrder(ProcessCase.RollbackProcess)]
-    class RollbackChangeHandler:ProcessStepHandler<SimpleEntitiesStore, IHasFaledCount>
+    [ProcessConfig(Group = "rollback")]
+    class RollbackChangeHandler: AbstractProcessHandler<SimpleEntitiesStore, IHasFaledCount>
     {
         protected override Task Process(SimpleEntitiesStore context, IHasFaledCount entity)
         {

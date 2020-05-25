@@ -10,8 +10,14 @@ namespace СonveyoR
 {
     public static class ServiceCollectionExtensions
     {
-        private static readonly Type CommonHandlerType = typeof(IProcessStepHandler<>);
+        private static readonly Type CommonHandlerType = typeof(IProcessHandler<>);
 
+        /// <summary>
+        /// Add ConveyR services to DI container
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="assemblies">Assemblies to scan for handlers IProcessHandler. By default: Assembly.GetEntryAssembly()</param>
+        /// <returns></returns>
         public static IServiceCollection AddConveyorR(this IServiceCollection services, params Assembly[] assemblies)
         {
             assemblies = assemblies!=null && assemblies.Any() ? assemblies: new []{ Assembly.GetEntryAssembly() };
@@ -19,6 +25,13 @@ namespace СonveyoR
             return AddConveyorR(services, assemblies,c=>c.AsSingleton().Using<Conveyor>());
         }
 
+        /// <summary>
+        /// Add ConveyR services to DI container
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="assemblies">Assemblies to scan for handlers IProcessHandler</param>
+        /// <param name="configuration">custom configuration</param>
+        /// <returns></returns>
         public static IServiceCollection AddConveyorR(this IServiceCollection services,
             IEnumerable<Assembly> assemblies, Action<ConveyoRServiceConfiguration> configuration)
         {
@@ -47,10 +60,10 @@ namespace СonveyoR
             return services;
         }
 
-        private static IEnumerable<object> GetServicesByContext(this IServiceProvider serviceProvider, Type contextType, ProcessCase processCase, Type entityType,
-            Type payloadType = null)
+        private static IEnumerable<object> GetServicesByContext(this IServiceProvider serviceProvider, Type contextType, Type entityType,
+            Type payloadType = null, string processCase=null)
         {
-            foreach (var processServiceType in ServiceFactoryExtensions.GetProcessServiceTypes(contextType,processCase,entityType,payloadType))
+            foreach (var processServiceType in ServiceFactoryExtensions.GetProcessServiceTypes(contextType,entityType,payloadType, processCase))
             {
                 yield return serviceProvider.GetService(processServiceType);
             }

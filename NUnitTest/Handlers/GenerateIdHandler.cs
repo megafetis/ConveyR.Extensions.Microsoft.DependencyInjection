@@ -6,7 +6,7 @@ using СonveyoR;
 
 namespace NUnitTest.Handlers
 {
-    class GenerateIdHandler:ProcessStepHandler<SimpleEntitiesStore, IEntity>
+    class GenerateIdHandler: AbstractProcessHandler<SimpleEntitiesStore, IEntity>
     {
         protected override Task Process(SimpleEntitiesStore context, IEntity entity)
         {

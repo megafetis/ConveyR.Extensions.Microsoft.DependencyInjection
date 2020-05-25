@@ -4,6 +4,9 @@ using СonveyoR;
 
 namespace ConveyoR
 {
+    /// <summary>
+    /// Customization of registration ConveyR services
+    /// </summary>
     public class ConveyoRServiceConfiguration
     {
         public Type ConveyorImplementationType { get; private set; }

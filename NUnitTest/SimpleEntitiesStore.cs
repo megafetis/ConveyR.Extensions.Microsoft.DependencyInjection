@@ -17,17 +17,17 @@ namespace NUnitTest
         }
         public async Task ChangeEntity(IEntity entity, object payload)
         {
-            await _conveyor.Process(this, ProcessCase.PreProcess, entity, payload);
+            await _conveyor.Process(this, entity, payload);
         }
 
         public async Task AfterChangeEntity(IEntity entity, object payload = null)
         {
-            await _conveyor.Process(this, ProcessCase.PostProcess, entity, payload);
+            await _conveyor.Process(this,  entity, payload,"after");
         }
 
         public async Task RollbackChangeEntitiy(IEntity entity, object payload = null)
         {
-            await _conveyor.Process(this, ProcessCase.RollbackProcess, entity, payload);
+            await _conveyor.Process(this, entity, payload,"rollback");
         }
     }
 }

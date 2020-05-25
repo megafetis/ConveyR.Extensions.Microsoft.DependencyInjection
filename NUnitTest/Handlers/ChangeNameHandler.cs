@@ -8,7 +8,7 @@ using СonveyoR;
 
 namespace NUnitTest.Handlers
 {
-    public class ChangeNameHandler:ProcessStepHandler<SimpleEntitiesStore, IHasName,IHasNamePayload>
+    public class ChangeNameHandler: AbstractProcessHandler<SimpleEntitiesStore, IHasName,IHasNamePayload>
     {
         protected override Task Process(SimpleEntitiesStore context, IHasName entity, IHasNamePayload payload)
         {

@@ -7,8 +7,8 @@ using СonveyoR;
 
 namespace NUnitTest.Handlers
 {
-    [ProcessOrder(ProcessCase.PostProcess)]
-    class TimestampEntityPostHandler:ProcessStepHandler<SimpleEntitiesStore,ITimestampedEntity>
+    [ProcessConfig(Group = "after")]
+    class TimestampEntityPostHandler:AbstractProcessHandler<SimpleEntitiesStore,ITimestampedEntity>
     {
         protected override Task Process(SimpleEntitiesStore context, ITimestampedEntity entity)
         {
