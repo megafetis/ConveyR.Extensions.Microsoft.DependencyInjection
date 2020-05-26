@@ -2,19 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.0</Version>
-    <PackageIcon>logo.jpg</PackageIcon>
+    <Version>1.0.1</Version>
+    <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/megafetis/ConveyR.Extensions.Microsoft.DependencyInjection</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageTags>Conveyr, Conveyor, Saga, Mediator, Chain responsability pattern</PackageTags>
+    <Description>Microsoft dependency extensions for ConveyR</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
     <PackageReference Include="СonveyR" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\ConveyR\logo.jpg">
+    <None Include="..\..\ConveyR\logo.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

@@ -22,7 +22,7 @@ namespace СonveyoR
         {
             assemblies = assemblies!=null && assemblies.Any() ? assemblies: new []{ Assembly.GetEntryAssembly() };
 
-            return AddConveyorR(services, assemblies,c=>c.AsSingleton().Using<Conveyor>());
+            return AddConveyorR(services, assemblies,c=>c.AsTransient().Using<Conveyor>());
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace СonveyoR
         {
             var conf = new ConveyoRServiceConfiguration();
 
-            conf.Using<Conveyor>().AsSingleton();
+            conf.Using<Conveyor>().AsTransient();
 
             configuration.Invoke(conf);
 
