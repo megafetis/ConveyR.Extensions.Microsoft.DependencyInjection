@@ -20,7 +20,7 @@ namespace ConsoleTestApp
         private static ServiceProvider BuildServices()
         {
             var services = new ServiceCollection();
-            services.AddConveyorR();
+            services.AddConveyR();
             var provider = services.BuildServiceProvider();
             return provider;
         }

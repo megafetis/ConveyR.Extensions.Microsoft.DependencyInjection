@@ -17,11 +17,11 @@ namespace ConveyR
         /// <param name="services"></param>
         /// <param name="assemblies">Assemblies to scan for handlers IProcessHandler. By default: Assembly.GetEntryAssembly()</param>
         /// <returns></returns>
-        public static IServiceCollection AddConveyorR(this IServiceCollection services, params Assembly[] assemblies)
+        public static IServiceCollection AddConveyR(this IServiceCollection services, params Assembly[] assemblies)
         {
             assemblies = assemblies!=null && assemblies.Any() ? assemblies: new []{ Assembly.GetEntryAssembly() };
 
-            return AddConveyorR(services, assemblies,c=>c.AsTransient().Using<Conveyor>());
+            return AddConveyR(services, assemblies,c=>c.AsTransient().Using<Conveyor>());
         }
 
         /// <summary>
@@ -31,7 +31,7 @@ namespace ConveyR
         /// <param name="assemblies">Assemblies to scan for handlers IProcessHandler</param>
         /// <param name="configuration">custom configuration</param>
         /// <returns></returns>
-        public static IServiceCollection AddConveyorR(this IServiceCollection services,
+        public static IServiceCollection AddConveyR(this IServiceCollection services,
             IEnumerable<Assembly> assemblies, Action<ConveyoRServiceConfiguration> configuration)
         {
             var conf = new ConveyoRServiceConfiguration();

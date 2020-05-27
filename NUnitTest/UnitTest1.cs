@@ -19,7 +19,7 @@ namespace NUnitTest
         public void Setup()
         {
             var services = new ServiceCollection();
-            services.AddConveyorR(typeof(Tests).Assembly);
+            services.AddConveyR(typeof(Tests).Assembly);
             _serviceProvider = services.BuildServiceProvider();
             _conveyor = _serviceProvider.GetService<IConveyor>();
         }
