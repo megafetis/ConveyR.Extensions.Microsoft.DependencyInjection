@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using СonveyoR;
 
-namespace ConveyoR
+namespace ConveyR
 {
     /// <summary>
     /// Customization of registration ConveyR services

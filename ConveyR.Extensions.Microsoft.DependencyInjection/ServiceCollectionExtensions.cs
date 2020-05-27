@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ConveyoR;
 using Microsoft.Extensions.DependencyInjection;
 
 
-namespace СonveyoR
+namespace ConveyR
 {
     public static class ServiceCollectionExtensions
     {

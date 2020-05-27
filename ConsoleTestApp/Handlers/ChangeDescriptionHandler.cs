@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using ConsoleTestApp.Entities;
 using ConsoleTestApp.Payloads;
-using СonveyoR;
+using ConveyR;
 
 namespace ConsoleTestApp.Handlers
 {

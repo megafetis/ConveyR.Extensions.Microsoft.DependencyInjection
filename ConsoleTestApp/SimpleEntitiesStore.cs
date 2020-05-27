@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using ConsoleTestApp.Entities;
-using СonveyoR;
+using ConveyR;
 
 namespace ConsoleTestApp
 {
