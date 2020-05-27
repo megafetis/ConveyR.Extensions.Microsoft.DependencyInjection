@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using ConsoleTestApp.Entities;
 using ConsoleTestApp.Payloads;
 using СonveyoR;
@@ -7,7 +8,7 @@ namespace ConsoleTestApp.Handlers
 {
     class ChangeDescriptionHandler:AbstractProcessHandler<SimpleEntitiesStore, IHasDescription,IHasDescriptionPayload>
     {
-        protected override Task Process(SimpleEntitiesStore context, IHasDescription entity, IHasDescriptionPayload payload)
+        protected override Task Process(SimpleEntitiesStore context, IHasDescription entity, IHasDescriptionPayload payload,CancellationToken cancellationToken=default)
         {
             entity.Description = payload.Description;
             return Task.CompletedTask;

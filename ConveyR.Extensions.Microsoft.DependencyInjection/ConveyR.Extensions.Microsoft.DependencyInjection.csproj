@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.1</Version>
+    <Version>1.1.1</Version>
     <PackageIcon>logo.png</PackageIcon>
     <RepositoryUrl>https://github.com/megafetis/ConveyR.Extensions.Microsoft.DependencyInjection</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0" />
-    <PackageReference Include="СonveyR" Version="1.0.0" />
+    <PackageReference Include="СonveyR" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
