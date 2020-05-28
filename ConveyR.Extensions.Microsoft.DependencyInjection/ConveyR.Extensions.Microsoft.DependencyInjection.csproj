@@ -9,12 +9,13 @@
     <RepositoryType>git</RepositoryType>
     <Copyright>Copyright Evgeniy Fetisov</Copyright>
     <PackageLicenseUrl>https://github.com/megafetis/ConveyR/blob/master/LICENSE.txt</PackageLicenseUrl>
-    <PackageTags>Conveyor, ConveyR, Saga, Mediator, chain responsability pattern,handlers, processing, patterns</PackageTags>
+    <PackageTags>Conveyor, ConveyR, Saga, Mediator, chain responsability pattern,handlers, processing, patterns, dependency injection</PackageTags>
     <Description>Microsoft dependency extensions for ConveyR</Description>
     <AssemblyName>ConveyR.Extensions.Microsoft.DependencyInjection</AssemblyName>
     <PackageId>ConveyR.Extensions.Microsoft.DependencyInjection</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Evgeniy Fetisov</Authors>
+    <Title>Microsoft.DependencyInjection extensions for ConveyR</Title>
   </PropertyGroup>
 
   <ItemGroup>
