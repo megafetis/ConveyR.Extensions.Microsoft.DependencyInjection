@@ -5,9 +5,14 @@ VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConveyR.Extensions.Microsoft.DependencyInjection", "ConveyR.Extensions.Microsoft.DependencyInjection\ConveyR.Extensions.Microsoft.DependencyInjection.csproj", "{DBE1144D-8CC1-47C3-95F0-08915E27BE02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{A27691A7-1087-40D1-A1CA-2D5404280FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{A27691A7-1087-40D1-A1CA-2D5404280FD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTestApp", "ConsoleTestApp\ConsoleTestApp.csproj", "{427FE6B2-23FB-4F0B-A112-55C0BC79371C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTestApp", "ConsoleTestApp\ConsoleTestApp.csproj", "{427FE6B2-23FB-4F0B-A112-55C0BC79371C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A10E5CE9-A966-4523-80E2-35F6947350A4}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

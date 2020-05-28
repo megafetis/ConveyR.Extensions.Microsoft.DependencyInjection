@@ -32,9 +32,9 @@ namespace ConveyR
         /// <param name="configuration">custom configuration</param>
         /// <returns></returns>
         public static IServiceCollection AddConveyR(this IServiceCollection services,
-            IEnumerable<Assembly> assemblies, Action<ConveyoRServiceConfiguration> configuration)
+            IEnumerable<Assembly> assemblies, Action<ConveyRServiceConfiguration> configuration)
         {
-            var conf = new ConveyoRServiceConfiguration();
+            var conf = new ConveyRServiceConfiguration();
 
             conf.Using<Conveyor>().AsTransient();
 
