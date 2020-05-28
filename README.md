@@ -5,4 +5,4 @@
 
 ConveyR extensions for Microsoft.Extensions.DependencyInjection DI
 
-DI extensions for library [ConveyR](https://github.com/megafetis/ConveyR).
+DI extensions for [ConveyR](https://github.com/megafetis/ConveyR).
