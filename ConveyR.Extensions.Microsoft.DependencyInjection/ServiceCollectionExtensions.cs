@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using UTypeExtensions;
 
 
 namespace ConveyR
@@ -46,7 +47,7 @@ namespace ConveyR
             IList<Type> handlerTypes = new List<Type>();
             foreach (var assembly in assemblies)
             {
-                foreach (var typeInfo in SearchWorkflowTypes(assembly))
+                foreach (var typeInfo in SearchHandlerTypes(assembly))
                 {
                     handlerTypes.Add(typeInfo);
                     services.AddTransient(typeInfo);
@@ -68,7 +69,7 @@ namespace ConveyR
             }
         }
 
-        private static Type[] SearchWorkflowTypes(Assembly assembly)
+        private static Type[] SearchHandlerTypes(Assembly assembly)
         {
             return assembly.GetTypes()
                 .Where(p => p.IsClass && !p.IsAbstract && p.InheritsOrImplements(CommonHandlerType)).ToArray();
