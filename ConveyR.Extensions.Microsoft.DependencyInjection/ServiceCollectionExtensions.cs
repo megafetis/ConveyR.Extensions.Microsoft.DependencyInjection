@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using UTypeExtensions;
 
 
@@ -50,7 +51,7 @@ namespace ConveyR
                 foreach (var typeInfo in SearchHandlerTypes(assembly))
                 {
                     handlerTypes.Add(typeInfo);
-                    services.AddTransient(typeInfo);
+                    services.Add(new ServiceDescriptor(typeInfo, typeInfo, conf.HandlerLifeTimePerTypeFunc(typeInfo)));
                 }
             }
 

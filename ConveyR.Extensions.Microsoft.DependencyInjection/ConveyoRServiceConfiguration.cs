@@ -11,6 +11,11 @@ namespace ConveyR
         public Type ConveyorImplementationType { get; private set; }
         public ServiceLifetime Lifetime { get; private set; }
 
+        /// <summary>
+        /// Customize lifetime for each handler
+        /// </summary>
+        public Func<Type, ServiceLifetime> HandlerLifeTimePerTypeFunc { get; set; } = type => ServiceLifetime.Transient;
+
         public ConveyRServiceConfiguration()
         {
             ConveyorImplementationType = typeof(Conveyor);
